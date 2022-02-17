@@ -91,3 +91,62 @@ func TestThreeSum(t *testing.T) {
 		fmt.Println(nums)
 	}
 }
+
+func TestLetterCombinations(t *testing.T) {
+	res := letterCombinations("23")
+	fmt.Println(res)
+	res = letterCombinations("")
+	fmt.Println(res)
+	res = letterCombinations("2")
+	fmt.Println(res)
+}
+
+func TestGenerateParenthesis(t *testing.T) {
+	res := generateParenthesis(1)
+	fmt.Println(res)
+	res = generateParenthesis(2)
+	fmt.Println(res)
+	res = generateParenthesis(3)
+	fmt.Println(res)
+	res = generateParenthesis(4)
+	fmt.Println(res)
+}
+
+func TestNextPermutation(t *testing.T) {
+	var arr []int
+	arr = []int{1, 2, 3}
+	nextPermutation(arr)
+	fmt.Println(arr)
+	arr = []int{3, 2, 1}
+	nextPermutation(arr)
+	fmt.Println(arr)
+	arr = []int{1, 1, 5}
+	nextPermutation(arr)
+	fmt.Println(arr)
+	arr = []int{1, 2, 3, 4, 6, 5}
+	nextPermutation(arr)
+	fmt.Println(arr)
+}
+
+func TestSearch(t *testing.T) {
+	var res int
+	res = search([]int{4, 5, 6, 7, 0, 1, 2}, 0)
+	fmt.Println(res)
+	res = search([]int{4, 5, 6, 7, 0, 1, 2}, 3)
+	fmt.Println(res)
+	res = search([]int{1}, 3)
+	fmt.Println(res)
+	res = search([]int{5, 1, 3}, 3)
+	fmt.Println(res)
+}
+
+func TestSearchRange(t *testing.T) {
+	res := searchRange([]int{5, 7, 7, 8, 8, 10}, 8)
+	fmt.Println(res)
+	res = searchRange([]int{5, 7, 7, 8, 8, 10}, 6)
+	fmt.Println(res)
+	res = searchRange([]int{}, 6)
+	fmt.Println(res)
+	res = searchRange([]int{5, 7, 7, 8, 10}, 8)
+	fmt.Println(res)
+}
