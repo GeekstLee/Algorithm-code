@@ -58,6 +58,8 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 }
 func TestMy(t *testing.T) {
 	str := "2sdad"
+	arr := []int{1, 2, 3, 4, 5}
+	fmt.Println(arr[:len(arr)-1])
 	fmt.Println(str[0:1])
 }
 
@@ -149,4 +151,116 @@ func TestSearchRange(t *testing.T) {
 	fmt.Println(res)
 	res = searchRange([]int{5, 7, 7, 8, 10}, 8)
 	fmt.Println(res)
+}
+
+func TestCombinationSum(t *testing.T) {
+	res := combinationSum([]int{2, 3, 5}, 8)
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+	fmt.Println("============")
+	res = combinationSum([]int{2, 3, 6, 7}, 7)
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+	fmt.Println("============")
+	res = combinationSum([]int{2, 3, 6}, 1)
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+}
+
+func TestPermute(t *testing.T) {
+	res := permute([]int{1, 2, 3})
+	for _, ans := range res {
+		fmt.Println(ans)
+	}
+	fmt.Println("===========")
+	res = permute([]int{1, 0})
+	for _, ans := range res {
+		fmt.Println(ans)
+	}
+}
+
+func TestRotate(t *testing.T) {
+	var res [][]int
+	res = [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	rotate(res)
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+	fmt.Println("==========")
+	res = [][]int{{5, 1, 9, 11}, {2, 4, 8, 10}, {13, 3, 6, 7}, {15, 14, 12, 16}}
+	rotate(res)
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+}
+
+func TestGroupAnagrams(t *testing.T) {
+	res := groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"})
+	for _, str := range res {
+		fmt.Println(str)
+	}
+	fmt.Println("==========")
+	res = groupAnagrams([]string{})
+	for _, str := range res {
+		fmt.Println(str)
+	}
+	fmt.Println("==========")
+	res = groupAnagrams([]string{"e"})
+	for _, str := range res {
+		fmt.Println(str)
+	}
+}
+
+func TestCanJump(t *testing.T) {
+	res := canJump([]int{2, 3, 1, 1, 4})
+	fmt.Println(res)
+	res = canJump([]int{3, 2, 1, 0, 4})
+	fmt.Println(res)
+}
+
+func TestMerge(t *testing.T) {
+	res := merge([][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}})
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+	fmt.Println("=======")
+	res = merge([][]int{{1, 4}, {4, 5}})
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+}
+
+func TestUniquePaths(t *testing.T) {
+	res := uniquePaths(3, 7)
+	fmt.Println(res)
+	res = uniquePaths(3, 3)
+	fmt.Println(res)
+}
+
+func TestMinPathSum(t *testing.T) {
+	res := minPathSum([][]int{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}})
+	fmt.Println(res)
+	res = minPathSum([][]int{{1, 2, 3}, {4, 5, 6}})
+	fmt.Println(res)
+}
+
+func TestSortColors(t *testing.T) {
+	arr := []int{2, 0, 2, 1, 1, 0}
+	sortColors(arr)
+	fmt.Println(arr)
+}
+
+func TestSubsets(t *testing.T) {
+	res := subsets([]int{1, 2, 3, 4})
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
+	fmt.Println("===============")
+	res = subsets([]int{9, 0, 3, 5, 7})
+	for _, arr := range res {
+		fmt.Println(arr)
+	}
 }
