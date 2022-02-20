@@ -264,3 +264,21 @@ func TestSubsets(t *testing.T) {
 		fmt.Println(arr)
 	}
 }
+
+func TestExist(t *testing.T) {
+	res := exist([][]byte{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}, "ABCCED")
+	fmt.Println(res)
+	res = exist([][]byte{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}, "SEE")
+	fmt.Println(res)
+	res = exist([][]byte{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}, "ABCB")
+	fmt.Println(res)
+}
+
+func TestNumTrees(t *testing.T) {
+	res := numTrees(3)
+	fmt.Println(res)
+	res = numTrees(4)
+	fmt.Println(res)
+	res = numTrees(5)
+	fmt.Println(res)
+}
