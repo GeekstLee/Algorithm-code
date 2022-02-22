@@ -344,3 +344,55 @@ func TestRob(t *testing.T) {
 	res = rob([]int{2, 7, 9, 3, 1})
 	fmt.Println(res)
 }
+
+func TestNumIslands(t *testing.T) {
+	res := numIslands([][]byte{
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '0', '1', '0'},
+		{'1', '1', '0', '0', '0'},
+		{'0', '0', '0', '0', '0'}})
+	fmt.Println(res)
+	res = numIslands([][]byte{
+		{'1', '1', '0', '0', '0'},
+		{'1', '1', '0', '0', '0'},
+		{'0', '0', '1', '0', '0'},
+		{'0', '0', '0', '1', '1'}})
+	fmt.Println(res)
+}
+
+func TestCanFinish(t *testing.T) {
+	res := canFinish(2, [][]int{{1, 0}})
+	fmt.Println(res)
+	res = canFinish(2, [][]int{{1, 0}, {0, 1}})
+	fmt.Println(res)
+	res = canFinish(5, [][]int{{1, 4}, {2, 4}, {3, 1}, {3, 2}})
+	fmt.Println(res)
+}
+
+func TestFindKthLargest(t *testing.T) {
+	res := findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2)
+	fmt.Println(res)
+}
+
+func TestMaximalSquare(t *testing.T) {
+	res := maximalSquare([][]byte{
+		{'1', '0', '1', '0', '0'},
+		{'1', '0', '1', '1', '1'},
+		{'1', '1', '1', '1', '1'},
+		{'1', '0', '0', '1', '0'}})
+	fmt.Println(res)
+}
+
+func TestLengthOfLIS(t *testing.T) {
+	res := lengthOfLIS([]int{10, 9, 2, 5, 3, 7, 101, 18})
+	fmt.Println(res)
+	res = lengthOfLIS([]int{0, 1, 0, 3, 2, 3})
+	fmt.Println(res)
+	res = lengthOfLIS([]int{7, 7, 7, 7, 7})
+	fmt.Println(res)
+}
+
+func TestProductExceptSelf(t *testing.T) {
+	res := productExceptSelf([]int{1, 2, 3, 4})
+	fmt.Println(res)
+}
