@@ -282,3 +282,65 @@ func TestNumTrees(t *testing.T) {
 	res = numTrees(5)
 	fmt.Println(res)
 }
+
+func TestLongestConsecutive(t *testing.T) {
+	res := longestConsecutive([]int{100, 4, 200, 1, 3, 2})
+	fmt.Println(res)
+	res = longestConsecutive([]int{0, 3, 7, 2, 5, 8, 4, 6, 0, 1})
+	fmt.Println(res)
+}
+
+func TestWordBreak(t *testing.T) {
+	res := wordBreak("leetcode", []string{"leet", "code"})
+	fmt.Println(res)
+	res = wordBreak("applepenapple", []string{"apple", "pen"})
+	fmt.Println(res)
+	res = wordBreak("catsandog", []string{"cats", "dog", "sand", "and", "cat"})
+	fmt.Println(res)
+}
+
+func TestMergeList(t *testing.T) {
+	l3 := &ListNode{
+		Val:  4,
+		Next: nil,
+	}
+	l2 := &ListNode{
+		Val:  3,
+		Next: l3,
+	}
+	l1 := &ListNode{
+		Val:  1,
+		Next: l2,
+	}
+	l6 := &ListNode{
+		Val:  7,
+		Next: nil,
+	}
+	l5 := &ListNode{
+		Val:  4,
+		Next: l6,
+	}
+	l4 := &ListNode{
+		Val:  2,
+		Next: l5,
+	}
+	head := mergeList(l1, l4)
+	for head != nil {
+		fmt.Println(head.Val)
+		head = head.Next
+	}
+}
+
+func TestMaxProduct(t *testing.T) {
+	res := maxProduct([]int{2, 3, -2, 4})
+	fmt.Println(res)
+	res = maxProduct([]int{-2, 0, -1})
+	fmt.Println(res)
+}
+
+func TestRob(t *testing.T) {
+	res := rob([]int{1, 2, 3, 1})
+	fmt.Println(res)
+	res = rob([]int{2, 7, 9, 3, 1})
+	fmt.Println(res)
+}
